@@ -1,11 +1,14 @@
+import { borderRadius } from "@mui/system";
 import Themes from "./themes";
 
 const styles = {
-  container: {
+  containerBody: {
     display: "flex",
-    width: "100%",
-    height: "90vh",
-    overflow: "scroll",
+    height: "100vh",
+    overflowY: "auto",
+    paddingX: 10,
+    paddingY: 5,
+    overflowY: "none",
   },
   header: {
     display: "flex",
@@ -13,7 +16,47 @@ const styles = {
     paddingY: 2,
     height: "10vh",
     alignItems: "center",
-    backgroundColor: "#000",
+    position: "fixed",
+    width: "100%",
+  },
+  headerNavigation: {
+    borderRadius: 15,
+    backgroundColor: `${Themes.gray}`,
+    textAlign: "center",
+  },
+  headerNavigationItem: {
+    padding: 2,
+    color: Themes.dark,
+  },
+  homeContainer: {
+    padding: 5,
+    // backgroundColor: Themes.primary,
+  },
+
+  homeCardContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  },
+  homeCard: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "300px", // Updated width to 300px
+    height: "300px", // Keeping the height as 300px
+    backgroundColor: "#f0f0f0",
+    margin: "10px",
+    borderRadius: "8px", // Optional: Adding some border-radius for better appearance
+    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)", // Optional: Adding some shadow for better appearance
+  },
+
+  paragraphText: {
+    textColor: Themes.dark,
+  },
+
+  mobileMenu: {
+    backgroundColor: Themes.gray,
   },
 };
 

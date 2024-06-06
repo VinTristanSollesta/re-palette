@@ -2,7 +2,14 @@ import "./App.css";
 import { Box } from "@mui/material";
 import Header from "./components/header";
 import styles from "./styles";
-import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import Home from "./components/home";
+import Talents from "./components/talents";
+import About from "./components/about";
+import Artists from "./components/artists";
+import Contact from "./components/contact";
+import TOS from "./components/tos";
 
 //components
 
@@ -10,22 +17,40 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: "",
+      element: <Home />,
     },
     {
-      path: "/",
-      element: "",
+      path: "/home",
+      element: <Home />,
     },
     {
-      path: "/",
-      element: "",
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path: "/contact",
+      element: <Contact />,
+    },
+    {
+      path: "/talents",
+      element: <Talents />,
+    },
+    {
+      path: "/artists",
+      element: <Artists />,
+    },
+    {
+      path: "/tos",
+      element: <TOS />,
     },
   ]);
 
   return (
-    <Box>
+    <Box sx={{ height: "100vh" }}>
       <Header />
-      <Box sx={styles.container}></Box>
+      <Box sx={styles.containerBody}>
+        <RouterProvider router={router} />
+      </Box>
     </Box>
   );
 };
