@@ -43,7 +43,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "300px", // Updated width to 300px
+    width: "240px", // Updated width to 300px
     height: "300px", // Keeping the height as 300px
     backgroundColor: "#f0f0f0",
     margin: "10px",
@@ -57,6 +57,12 @@ const styles = {
 
   mobileMenu: {
     backgroundColor: Themes.gray,
+  },
+  carousel: {
+    display: "flex",
+    height: "720px",
+    width: "300px",
+    backgroundColor: Themes.secondary, // temporary
   },
 };
 

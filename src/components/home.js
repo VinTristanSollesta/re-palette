@@ -11,7 +11,7 @@ const Sample = [
   },
   {
     id: 1,
-    text: "Hello",
+    text: "Brothers and sisters I have none. But that man's father is my father's son",
   },
   {
     id: 2,
@@ -33,11 +33,7 @@ const Sample = [
 
 const Home = () => {
   return (
-    <Grid
-      container
-      sx={{ paddingY: 10, paddingX: 10, width: "100%" }}
-      spacing={2}
-    >
+    <Grid container sx={{ paddingY: 10, width: "100%" }} spacing={2}>
       <Grid item sm={6} xs={12}>
         <Typography>Hi</Typography>
       </Grid>
