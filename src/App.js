@@ -1,6 +1,7 @@
 import "./App.css";
 import { Box } from "@mui/material";
-import Header from "./components/header";
+import Header from "./header";
+import Footer from "./footer";
 import styles from "./styles";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
@@ -46,10 +47,12 @@ const App = () => {
   ]);
 
   return (
-    <Box sx={{ height: "100vh" }}>
+    <Box sx={{ height: "100vh", overflowY: "auto" }}>
       <Header />
       <Box sx={styles.containerBody}>
         <RouterProvider router={router} />
+
+        <Footer />
       </Box>
     </Box>
   );

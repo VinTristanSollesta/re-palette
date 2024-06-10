@@ -10,8 +10,8 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Grid from "@mui/material/Unstable_Grid2";
-import styles from "../styles";
-import REPALETTELOGO from "../assets/rp-2x2.svg";
+import styles from "./styles";
+import REPALETTELOGO from "./assets/rp-2x2.svg";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -76,10 +76,15 @@ const Header = () => {
       )}
       {isXs && menuOpen && (
         <Grid container xs={12} sx={styles.mobileMenu}>
-          <List>
+          <List sx={{ width: "100%" }}>
             {menuItems.map((item, index) => (
               <ListItem button key={index} onClick={toggleMenu(false)}>
-                <Link href={item.href} color="inherit" underline="hover">
+                <Link
+                  href={item.href}
+                  color="inherit"
+                  underline="hover"
+                  width={"inherit"}
+                >
                   <Typography variant="h6">{item.text}</Typography>
                 </Link>
               </ListItem>
